@@ -8,14 +8,30 @@
     <link rel="stylesheet" href="stylesheet.css">
     <title>Wheel of Fortune!</title>
 </head>
+
+<!-- Game board section with greeting, instructions and game board -->
+
+<!-- body grid for placing main child elements on the page; sub-grid for placing elements within container -->
 <body class="grid">
-    <div>
+    <section id="board">
+        <div id="b-grid" class="container"> 
+            <h1>Wheel of Fortune!</h1>
+            <h2>Guess the letters in the word below, but you can only get three wrong!</h2>
+            <div id="letter-spaces"></div>
+            <div id="hints"></div>
+        </div>
+    </section>
 
+<!-- Player's interactive section with input for guess, "submit button" and "guesses left" counter -->
 
-    </div>
-    
-
-
-    <script type = "text/javascript" src="scripts.js"></script>
+<!-- another sub-grid for placing elements within section container -->
+    <section id="pi">
+        <div id="pi-grid" class="container"> 
+            <input type="text" id="enter-guess">
+            <button id="submit-guess">Submit Your Guess!</button>
+            <h3 id="guesses-left">Guesses left: 3</h3>
+        </div>
+    </section>
+    <script src="scripts.js"></script>
 </body>
 </html>

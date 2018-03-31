@@ -1,1 +1,46 @@
-  
+body.grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr minmax(450px,auto) 1fr
+}  
+
+#board {
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+
+#b-grid {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+#b-grid h1 {
+    justify-self: center;
+}
+
+#pi {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    align-self: center;
+}
+
+#pi-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(250px,auto) 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#enter-guess {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#submit-guess {
+    grid-column: 2/3;
+    grid-row: 4/5;
+} 
+
+#guesses-left {
+    grid-column: 2/3;
+    justify-self: center;
+}
