@@ -12,10 +12,20 @@ body.grid {
 #b-grid {
     display: grid;
     grid-auto-flow: row;
+    grid-template-rows: 1fr 2fr 1fr 1fr;
 }
 
 #b-grid h1 {
     justify-self: center;
+}
+
+#b-grid div {
+    justify-self: center;
+    align-self: center;
+}
+
+#letter-spaces {
+    font-size: 2em;
 }
 
 #pi {
