@@ -1,7 +1,10 @@
 body.grid {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr minmax(450px,auto) 1fr
+    grid-template-columns: 1fr minmax(450px,auto) 1fr;
+    background: #ffffcc;
+    font: 18px arial, sans-serif;
+    text-shadow: 0 0 3px #FF0000;
 }  
 
 #board {
@@ -37,7 +40,7 @@ body.grid {
 #pi-grid {
     display: grid;
     grid-template-columns: 1fr minmax(250px,auto) 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
 }
 
 #enter-guess {
@@ -49,6 +52,11 @@ body.grid {
     grid-column: 2/3;
     grid-row: 4/5;
 } 
+
+#new-round {
+    grid-column: 2/3;
+    grid-row: 6/7
+}
 
 #guesses-left {
     grid-column: 2/3;
