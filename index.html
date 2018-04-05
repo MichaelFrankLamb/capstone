@@ -27,9 +27,10 @@
 <!-- another sub-grid for placing elements within section container -->
     <section id="pi">
         <div id="pi-grid" class="container"> 
-            <input type="text" id="enter-guess">
+            <input type="text" onfocus="this.value=''" id="enter-guess">
             <button type="submit" id="submit-guess">Submit Your Guess!</button>
             <h3 id="guesses-left">Guesses left: 3</h3>
+            <button type="reset" id="new-round">Play New Round</button>
         </div>
     </section>
     <script src="scripts.js"></script>
