@@ -20,6 +20,11 @@ function Wheel() {
     })
     })
 
+    var modal = document.getElementById('myModal');
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
     game.guesses = 3;
     var checkAnswer = game.checkAnswer;
     var getAnswerLetters = game.getAnswerLetters; 
@@ -83,6 +88,20 @@ function loseGame() {
     window.location.reload(true)
 }
 
+function winGame() {
+    modal.style.display = "block";
+    captionText.innerHTML = "You're a real winner! Try another round!";
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+  window.location.reload(true)
+}
+}
+
 
 function displayNewText() {
     var changeDash = checkAnswer.slice();
@@ -94,8 +113,11 @@ function displayNewText() {
             }
         }
 
-    } displayAnswerSplit = changeDash.join(" ");  /// if you have problems with display after loading a new game this could be why - don't re-use displayAnswerSplit variable
+    } displayAnswerSplit = changeDash.join(" ");  
     game.letterSpaces.textContent = displayAnswerSplit;
+    if (displayAnswerSplit == (game.answers[arraysIndex]).split("").join(" ")) {
+        winGame()
+    }
 
 }
 
