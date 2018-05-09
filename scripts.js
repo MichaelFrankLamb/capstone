@@ -20,7 +20,6 @@ function Wheel() {
     var getAnswerLetters = game.getAnswerLetters; 
     var answerSplit = game.answerSplit;
     var displayAnswerSplit = game.displayAnswerSplit;
-    var formatText = game.formatText; 
     var rightGuesses = [];
     const arraysIndex = Math.floor(Math.random() * 3);
 
@@ -47,7 +46,6 @@ function Wheel() {
 
 
 function answerEval() {
-
     x = false;
     for (var i = 0; i < checkAnswer.length; i++) {
         if (game.enterGuess.value === checkAnswer[i]) {
@@ -66,6 +64,7 @@ function decrementGuesses() {
         game.guessesLeft.textContent = "Guesses left: " + (game.guesses);
 }
 
+
 function displayNewText() {
     var changeDash = checkAnswer.slice();
     
@@ -75,6 +74,7 @@ function displayNewText() {
                 changeDash[i] = "_";
             }
         }
+
     } displayAnswerSplit = changeDash.join(" ");  /// if you have problems with display after loading a new game this could be why - don't re-use displayAnswerSplit variable
     game.letterSpaces.textContent = displayAnswerSplit;
 
@@ -82,10 +82,7 @@ function displayNewText() {
 
 };
 
-
 var myWheel = new Wheel();
 
 window.onload = myWheel.loadGame;
-
-
 
