@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,10 @@
 <!-- Game board section with greeting, instructions and game board -->
 
 <!-- body grid for placing main child elements on the page; sub-grid for placing elements within container -->
+
 <body class="grid">
     <section id="board">
-        <div id="b-grid" class="container"> 
+        <div id="b-grid" class="container">
             <h1>Wheel of Fortune!</h1>
             <h2>Guess the letters in the word below, but you can only get three wrong!</h2>
             <div id="letter-spaces" style="white-space: pre-wrap"></div>
@@ -22,11 +24,11 @@
         </div>
     </section>
 
-<!-- Player's interactive section with input for guess, "submit button" and "guesses left" counter -->
+    <!-- Player's interactive section with input for guess, "submit button" and "guesses left" counter -->
 
-<!-- another sub-grid for placing elements within section container -->
+    <!-- another sub-grid for placing elements within section container -->
     <section id="pi">
-        <div id="pi-grid" class="container"> 
+        <div id="pi-grid" class="container">
             <input type="text" onfocus="this.value=''" id="enter-guess">
             <button type="submit" id="submit-guess">Submit Your Guess!</button>
             <h3 id="guesses-left">Guesses left: 3</h3>
@@ -37,20 +39,21 @@
     <!-- Trigger the Modal -->
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-  <img id="myImg" src="images/sajak-walrus.jpg" alt="You're a real winner!" width="500" height="400">
+        <img id="myImg" src="images/sajak-walrus.jpg" alt="You're a real winner!" width="500" height="400">
 
-  <!-- The Close Button -->
-  <span class="close">&times;</span>
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
 
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="img01">
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
 
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
     <script src="scripts.js"></script>
 </body>
+
 </html>
