@@ -1,3 +1,4 @@
+/* Grid for the document body */
 body.grid {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -12,6 +13,7 @@ body.grid {
     grid-column-start: 2;
 }
 
+/* Sub-grid for more precise placement of elements */
 #b-grid {
     display: grid;
     grid-auto-flow: row;
@@ -37,6 +39,7 @@ body.grid {
     align-self: center;
 }
 
+/* Player Interface Grid to place buttons and input box */
 #pi-grid {
     display: grid;
     grid-template-columns: 1fr minmax(250px,auto) 1fr;
